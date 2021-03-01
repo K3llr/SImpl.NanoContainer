@@ -6,7 +6,6 @@
     <Authors>Mikkel Keller</Authors>
     <Description>SImpl.NanoContainer</Description>
     <PackageTags>SImpl.NanoContainer</PackageTags>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>

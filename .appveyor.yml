@@ -7,6 +7,8 @@
   before_build:
     - ps: nuget restore .\src\SImpl.NanoContainer.sln
   build:
+    publish_nuget: true
+    publish_nuget_symbols: true
     project: .\src\SImpl.NanoContainer.sln
 
   deploy:
@@ -17,4 +19,4 @@
     artifact: /.*(\.|\.s)nupkg/
 
   artifacts:
-    - path: '.\dist\*.nupkg' # find all NuGet packages recursively
+    - path: '.\dist\*.nupkg'
