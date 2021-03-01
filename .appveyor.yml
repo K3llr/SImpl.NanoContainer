@@ -8,7 +8,6 @@
     - ps: nuget restore .\src\SImpl.NanoContainer.sln
   build:
     publish_nuget: true
-    publish_nuget_symbols: true
     project: .\src\SImpl.NanoContainer.sln
 
   deploy:
@@ -17,6 +16,3 @@
       secure: 4tlN94KhoDTJOrHn206SKYpZOgZGXdbosupzi5I7o7W96h8cGs6cPqia2tIBqCm6
     skip_symbols: false
     artifact: /.*(\.|\.s)nupkg/
-
-  artifacts:
-    - path: '.\dist\*.nupkg'
