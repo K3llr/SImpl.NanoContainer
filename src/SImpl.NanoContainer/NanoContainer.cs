@@ -9,6 +9,13 @@ namespace SImpl.NanoContainer
         private readonly IDictionary<Type, IServiceResolver> _instances = new Dictionary<Type, IServiceResolver>();
         private bool _allowRegistrations = true;
 
+        public NanoContainer()
+        {
+            Current = this;
+        }
+
+        public NanoContainer Current { get; set; }
+
         public INanoContainer Register<TService>(IServiceResolver serviceResolver)
         {
             return AddServiceRegistration(typeof(TService), serviceResolver);
