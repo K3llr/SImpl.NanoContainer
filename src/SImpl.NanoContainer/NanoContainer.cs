@@ -14,7 +14,7 @@ namespace SImpl.NanoContainer
             Current = this;
         }
 
-        public NanoContainer Current { get; set; }
+        public static NanoContainer Current { get; set; }
 
         public INanoContainer Register<TService>(IServiceResolver serviceResolver)
         {
